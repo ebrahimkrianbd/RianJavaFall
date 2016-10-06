@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -27,49 +31,400 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="7" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleEightAction" prefHeight="30.0" prefWidth="40.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleNineAction" prefHeight="30.0" prefWidth="40.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleDivisionAction" prefHeight="30.0" prefWidth="40.0" text="÷" textFill="#358dbf" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleAllDeleteAction" prefHeight="30.0" prefWidth="40.0" text="AC" textFill="#ee1616" GridPane.columnIndex="4" GridPane.rowIndex="1">
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="7" GridPane.columnIndex="0" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleEightAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleNineAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleDivisionAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="÷" textFill="#358dbf" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleAllDeleteAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: #FF0000; -fx-font-style: bold; -fx-font-size: 14;" text="AC" textFill="#ee1616" GridPane.columnIndex="5" GridPane.rowIndex="1">
                <font>
                   <Font size="14.0" />
-               </font></Button>
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleClearAction" prefHeight="30.0" prefWidth="40.0" text="C" textFill="#cd1616" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleClearAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: #FF0000;" text="C" textFill="#cd1616" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
             
-             <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="7" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleFiveAction" prefHeight="30.0" prefWidth="40.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleSixAction" prefHeight="30.0" prefWidth="40.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleMultiplyAction" prefHeight="30.0" prefWidth="40.0" text="x" textFill="#358dbf" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleMemoriReturnAction" prefHeight="30.0" prefWidth="40.0" text="MR" textFill="#9e9672" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleMemoriSaveAction" prefHeight="30.0" prefWidth="40.0" text="M+" textFill="#a18a51" GridPane.columnIndex="5" GridPane.rowIndex="2">
-               <font>
-                  <Font size="12.0" />
-               </font></Button>
-            
-             <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="7" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleTwoAction" prefHeight="30.0" prefWidth="40.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleThreeAction" prefHeight="30.0" prefWidth="40.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleSubtructAction" prefHeight="30.0" prefWidth="40.0" text="-" textFill="#358dbf" GridPane.columnIndex="3" GridPane.rowIndex="3">
-               <font>
-                  <Font size="14.0" />
-               </font></Button>
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleXSqrAction" prefHeight="30.0" prefWidth="40.0" text="X²" textFill="#2730e1" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleRootAction" prefHeight="30.0" prefWidth="40.0" text="√" textFill="#282dcd" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-            
-             <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleSevenAction" prefHeight="30.0" prefWidth="40.0" text="7" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handlePointAction" prefHeight="30.0" prefWidth="40.0" text="." textFill="#652222" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handlePersendAction" prefHeight="30.0" prefWidth="40.0" text="\%" textFill="#304ec6" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleEqualAction" prefHeight="30.0" prefWidth="40.0" text="=" textFill="#14e422" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-            <TextField fx:id="DesplyField" maxHeight="30.0" maxWidth="285.0" minHeight="30.0" minWidth="285.0" prefHeight="30.0" prefWidth="285.0" GridPane.columnSpan="6" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleFourAction" prefHeight="30.0" prefWidth="40.0" text="4" GridPane.rowIndex="2" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleOneAction" prefHeight="30.0" prefWidth="40.0" text="1" GridPane.rowIndex="3" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleZeroAction" prefHeight="30.0" prefWidth="40.0" text="0" GridPane.rowIndex="4" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleAddAction" prefHeight="30.0" prefWidth="40.0" text="+" textFill="#358dbf" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleMemoriClearAction" prefHeight="30.0" prefWidth="40.0" text="MC" textFill="#a18a51" GridPane.columnIndex="4" GridPane.rowIndex="3">
+             <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="7" GridPane.columnIndex="0" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleFiveAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleSixAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleMultiplyAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="x" textFill="#358dbf" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleMemoriReturnAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: #330000;" text="MR" textFill="#9e9672" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleMemoriSaveAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: #330000;" text="M+" textFill="#a18a51" GridPane.columnIndex="5" GridPane.rowIndex="2">
                <font>
                   <Font size="12.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            
+             <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="7" GridPane.columnIndex="0" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleTwoAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleThreeAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleSubtructAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="-" textFill="#358dbf" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleXSqrAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: DarkSlateGray;" text="X²" textFill="#2730e1" GridPane.columnIndex="5" GridPane.rowIndex="4">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleRootAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: DarkSlateGray;" text="√" textFill="#282dcd" GridPane.columnIndex="5" GridPane.rowIndex="3">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            
+             <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleSevenAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="7" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handlePointAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="." textFill="#652222" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handlePersendAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="\%" textFill="#304ec6" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleEqualAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: black;" text="=" textFill="#14e422" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <TextField fx:id="DesplyField" maxHeight="30.0" maxWidth="285.0" minHeight="30.0" minWidth="285.0" prefHeight="30.0" prefWidth="285.0" GridPane.columnSpan="6" />
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleFourAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="4" GridPane.rowIndex="2">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleOneAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="1" GridPane.rowIndex="3">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleZeroAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="0" GridPane.rowIndex="4">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleAddAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="+" textFill="#358dbf" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleMemoriClearAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: #330000;" text="MC" textFill="#a18a51" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
             </Button>
          </children>
       </GridPane>

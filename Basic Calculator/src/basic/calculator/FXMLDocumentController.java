@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.effect.BlendMode;
 
 /**
  *
@@ -76,16 +77,20 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void handleAllDeleteAction(ActionEvent event) {
+        DesplyField.setBlendMode(BlendMode.SRC_OVER);
         DesplyField.setText("");
     }
 
     @FXML
     private void handleClearAction(ActionEvent event) {
         String oldText = DesplyField.getText();
-
+        String newText = null;
         int len = oldText.length();
         
-        
+        if(len > 0){
+        newText = oldText.substring(0, len-1);
+        DesplyField.setText(newText);
+        }
 
         /*String newText = "";
         for (int i = 0; i < len - 1; i++) {
@@ -135,7 +140,7 @@ public class FXMLDocumentController implements Initializable {
         operation = "Multiply";
         DesplyField.setText("");
     }
-
+    
     @FXML
     private void handleTwoAction(ActionEvent event) {
         if(!operationPending){
@@ -256,6 +261,9 @@ public class FXMLDocumentController implements Initializable {
             result = number1 / number2;
             DesplyField.setText("" + result);
             operationPending = false;
+            }else{
+                DesplyField.setBlendMode(BlendMode.RED);
+                DesplyField.setText("Math Error! click " +"AC" +" and continue.");
             }
         }
     }
