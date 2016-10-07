@@ -32,6 +32,7 @@ public class FXMLDocumentController implements Initializable {
     boolean resultUpdated = true;
     boolean operationPending = true;
     boolean mathError = true;
+    boolean number1bool = false;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -81,10 +82,49 @@ public class FXMLDocumentController implements Initializable {
         if(mathError){
         oldText = DesplyField.getText();
         
+        if(!operation.equals("") && number1bool && !oldText.equals("")){
+            
+        number2 = Double.parseDouble(oldText);
+        if (operation == "Add") {
+            number1 += number2;
+            DesplyField.setText("");
+            operation = "Division";
+            number1bool = true;
+        } else if (operation == "Subruct") {
+            number1 -= number2;
+            DesplyField.setText("");
+            operation = "Division";
+            number1bool = true;
+        } else if (operation == "Multiply") {
+            number1 *= number2;
+            DesplyField.setText("");
+            operation = "Division";
+            number1bool = true;
+        } else if (operation == "Division") {
+            
+            if(number2 != 0){
+            number1 /= number2;
+            DesplyField.setText("");
+            operation = "Division";
+            number1bool = true;
+            }else{
+                DesplyField.setBlendMode(BlendMode.RED);
+                DesplyField.setText("Math Error! click " +"AC" +" and continue.");
+                mathError = false;
+                number1bool = false;
+            }
+        }
+            
+        }
+        else{
+            
+        operation = "Division";
+        
         if(!oldText.equals("")){
         number1 = Double.parseDouble(oldText);
-        operation = "Division";
         DesplyField.setText("");
+        number1bool = true;
+        }
         }
         }
     }
@@ -159,10 +199,49 @@ public class FXMLDocumentController implements Initializable {
         if(mathError){
         oldText = DesplyField.getText();
         
+        if(!operation.equals("") && number1bool && !oldText.equals("")){
+            
+        number2 = Double.parseDouble(oldText);
+        if (operation == "Add") {
+            number1 += number2;
+            DesplyField.setText("");
+            operation = "Multiply";
+            number1bool = true;
+        } else if (operation == "Subruct") {
+            number1 -= number2;
+            DesplyField.setText("");
+            operation = "Multiply";
+            number1bool = true;
+        } else if (operation == "Multiply") {
+            number1 *= number2;
+            DesplyField.setText("");
+            operation = "Multiply";
+            number1bool = true;
+        } else if (operation == "Division") {
+            
+            if(number2 != 0){
+            number1 /= number2;
+            DesplyField.setText("");
+            operation = "Multiply";
+            number1bool = true;
+            }else{
+                DesplyField.setBlendMode(BlendMode.RED);
+                DesplyField.setText("Math Error! click " +"AC" +" and continue.");
+                mathError = false;
+                number1bool = false;
+            }
+        }
+            
+        }
+        else{
+            
+        operation = "Multiply";
+        
         if(!oldText.equals("")){
         number1 = Double.parseDouble(oldText);
-        operation = "Multiply";
         DesplyField.setText("");
+        number1bool = true;
+        }
         }
         }
     }
@@ -212,13 +291,15 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void handleSubtructAction(ActionEvent event) {
+        operation = "Subruct";
+        
         if(mathError){
         oldText = DesplyField.getText();
         
         if(!oldText.equals("")){
         number1 = Double.parseDouble(oldText);
-        operation = "Subruct";
         DesplyField.setText("");
+        number1bool = true;
         }
         }
 
@@ -292,11 +373,17 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void handleEqualAction(ActionEvent event) {
         if(mathError){
+            if(!number1bool){
+                DesplyField.setBlendMode(BlendMode.RED);
+                DesplyField.setText("Math Error! click " +"AC" +" and continue.");
+                mathError = false;
+            }else{
         newText = DesplyField.getText();
         if(newText.equals("")){
             DesplyField.setBlendMode(BlendMode.RED);
             DesplyField.setText("Math Error! click " +"AC" +" and continue.");
             mathError = false;
+            number1bool = false;
         }else{
         number2 = Double.parseDouble(newText);
         double result = 0.0;
@@ -305,16 +392,19 @@ public class FXMLDocumentController implements Initializable {
             result = number1 + number2;
             DesplyField.setText("" + result);
             resultUpdated = false;
+            number1bool = false;
         } else if (operation == "Subruct") {
             operation = "";
             result = number1 - number2;
             DesplyField.setText("" + result);
             resultUpdated = false;
+            number1bool = false;
         } else if (operation == "Multiply") {
             operation = "";
             result = number1 * number2;
             DesplyField.setText("" + result);
             resultUpdated = false;
+            number1bool = false;
         } else if (operation == "Division") {
             operation = "";
             
@@ -322,11 +412,14 @@ public class FXMLDocumentController implements Initializable {
             result = number1 / number2;
             DesplyField.setText("" + result);
             resultUpdated = false;
+            number1bool = false;
             }else{
                 DesplyField.setBlendMode(BlendMode.RED);
                 DesplyField.setText("Math Error! click " +"AC" +" and continue.");
                 mathError = false;
+                number1bool = false;
             }
+        }
         }
         }
         }
@@ -388,13 +481,15 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void handleAddAction(ActionEvent event) {
+        operation = "Add";
+        
         if(mathError){
         oldText = DesplyField.getText();
         
         if(!oldText.equals("")){
         number1 = Double.parseDouble(oldText);
-        operation = "Add";
         DesplyField.setText("");
+        number1bool = true;
         }
         }
     }
