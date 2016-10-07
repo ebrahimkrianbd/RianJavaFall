@@ -133,7 +133,10 @@ public class FXMLDocumentController implements Initializable {
     private void handleAllDeleteAction(ActionEvent event) {
         DesplyField.setBlendMode(BlendMode.SRC_OVER);
         DesplyField.setText("");
+        resultUpdated = true;
+        operationPending = true;
         mathError = true;
+        number1bool = false;
     }
 
     @FXML
@@ -291,15 +294,52 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void handleSubtructAction(ActionEvent event) {
-        operation = "Subruct";
-        
         if(mathError){
         oldText = DesplyField.getText();
+        
+        if(!operation.equals("") && number1bool && !oldText.equals("")){
+            
+        number2 = Double.parseDouble(oldText);
+        if (operation == "Add") {
+            number1 += number2;
+            DesplyField.setText("");
+            operation = "Subruct";
+            number1bool = true;
+        } else if (operation == "Subruct") {
+            number1 -= number2;
+            DesplyField.setText("");
+            operation = "Subruct";
+            number1bool = true;
+        } else if (operation == "Multiply") {
+            number1 *= number2;
+            DesplyField.setText("");
+            operation = "Subruct";
+            number1bool = true;
+        } else if (operation == "Division") {
+            
+            if(number2 != 0){
+            number1 /= number2;
+            DesplyField.setText("");
+            operation = "Subruct";
+            number1bool = true;
+            }else{
+                DesplyField.setBlendMode(BlendMode.RED);
+                DesplyField.setText("Math Error! click " +"AC" +" and continue.");
+                mathError = false;
+                number1bool = false;
+            }
+        }
+            
+        }
+        else{
+            
+        operation = "Subruct";
         
         if(!oldText.equals("")){
         number1 = Double.parseDouble(oldText);
         DesplyField.setText("");
         number1bool = true;
+        }
         }
         }
 
@@ -366,19 +406,67 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void handlePersendAction(ActionEvent event) {
         if(mathError){
+        oldText = DesplyField.getText();
+        double result = 0;
+        
+        if(!oldText.equals("")){
+        number2 = Double.parseDouble(oldText);
+        if (!operation.equals("") && number1bool){
+        if (operation == "Add") {
+            result = number1 + ((number1/100.0) * number2);
+            DesplyField.setText("" + result);
+            operation = "";
+            number1bool = false;
+            resultUpdated = false;
+        } else if (operation == "Subruct") {
+            result = number1 - ((number1/100.0) * number2);
+            DesplyField.setText("" + result);
+            operation = "";
+            number1bool = false;
+            resultUpdated = false;
+        } else if (operation == "Multiply") {
+            result = (number1/100.0) * number2;
+            DesplyField.setText("" + result);
+            operation = "";
+            number1bool = false;
+            resultUpdated = false;
+        } else if (operation == "Division") {
             
+            if(number2 != 0){
+            result = number1 / (number2 / 100.0);
+            DesplyField.setText("" + result);
+            operation = "";
+            number1bool = false;
+            resultUpdated = false;
+            }else{
+                DesplyField.setBlendMode(BlendMode.RED);
+                DesplyField.setText("Math Error! click " +"AC" +" and continue.");
+                mathError = false;
+                number1bool = false;
+            }
+        }
+        }else{
+            result = number2/100.0;
+            DesplyField.setText("" + result);
+            operation = "";
+            number1bool = false;
+        }
+        }
         }
     }
 
     @FXML
     private void handleEqualAction(ActionEvent event) {
         if(mathError){
-            if(!number1bool){
+        newText = DesplyField.getText();
+        if((!number1bool || operation.equals("")) && !newText.equals("")){
+            DesplyField.setText(newText);
+        }
+        else if(!number1bool || operation.equals("") || newText.equals("")){
                 DesplyField.setBlendMode(BlendMode.RED);
                 DesplyField.setText("Math Error! click " +"AC" +" and continue.");
                 mathError = false;
             }else{
-        newText = DesplyField.getText();
         if(newText.equals("")){
             DesplyField.setBlendMode(BlendMode.RED);
             DesplyField.setText("Math Error! click " +"AC" +" and continue.");
@@ -481,15 +569,52 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void handleAddAction(ActionEvent event) {
-        operation = "Add";
-        
         if(mathError){
         oldText = DesplyField.getText();
+        
+        if(!operation.equals("") && number1bool && !oldText.equals("")){
+            
+        number2 = Double.parseDouble(oldText);
+        if (operation == "Add") {
+            number1 += number2;
+            DesplyField.setText("");
+            operation = "Add";
+            number1bool = true;
+        } else if (operation == "Subruct") {
+            number1 -= number2;
+            DesplyField.setText("");
+            operation = "Add";
+            number1bool = true;
+        } else if (operation == "Multiply") {
+            number1 *= number2;
+            DesplyField.setText("");
+            operation = "Add";
+            number1bool = true;
+        } else if (operation == "Division") {
+            
+            if(number2 != 0){
+            number1 /= number2;
+            DesplyField.setText("");
+            operation = "Add";
+            number1bool = true;
+            }else{
+                DesplyField.setBlendMode(BlendMode.RED);
+                DesplyField.setText("Math Error! click " +"AC" +" and continue.");
+                mathError = false;
+                number1bool = false;
+            }
+        }
+            
+        }
+        else{
+            
+        operation = "Add";
         
         if(!oldText.equals("")){
         number1 = Double.parseDouble(oldText);
         DesplyField.setText("");
         number1bool = true;
+        }
         }
         }
     }
