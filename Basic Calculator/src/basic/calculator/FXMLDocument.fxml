@@ -73,7 +73,7 @@
                      </light>
                   </Lighting>
                </effect></Button>
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleDivisionAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="÷" textFill="#358dbf" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleDivisionAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(olive 0%, white 100%); -fx-text-fill: Black;" text="÷" textFill="#358dbf" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -87,7 +87,7 @@
                      </light>
                   </Lighting>
                </effect></Button>
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleAllDeleteAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: #FF0000;" text="AC" textFill="#ee1616" GridPane.columnIndex="5" GridPane.rowIndex="1">
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleAllDeleteAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(red 0%, white 100%); -fx-text-fill: #FF0000;" text="AC" textFill="#ee1616" GridPane.columnIndex="5" GridPane.rowIndex="1">
                <font>
                   <Font size="14.0" />
                </font>
@@ -104,7 +104,7 @@
                      </light>
                   </Lighting>
                </effect></Button>
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleClearAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: #FF0000;" text="C" textFill="#cd1616" GridPane.columnIndex="4" GridPane.rowIndex="1">
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleClearAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(red 0%, white 100%); -fx-text-fill: #FF0000;" text="C" textFill="#cd1616" GridPane.columnIndex="4" GridPane.rowIndex="1">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -161,7 +161,7 @@
                      </light>
                   </Lighting>
                </effect></Button>
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleMultiplyAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="x" textFill="#358dbf" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleMultiplyAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(olive 0%, white 100%); -fx-text-fill: Black;" text="x" textFill="#358dbf" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -175,7 +175,7 @@
                      </light>
                   </Lighting>
                </effect></Button>
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleMemoriReturnAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: #330000;" text="MR" textFill="#9e9672" GridPane.columnIndex="4" GridPane.rowIndex="2">
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleMemoriReturnAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(gold 0%, white 100%); -fx-text-fill: #330000;" text="MR" textFill="#9e9672" GridPane.columnIndex="4" GridPane.rowIndex="2">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -189,7 +189,7 @@
                      </light>
                   </Lighting>
                </effect></Button>
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleMemoriSaveAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: #330000;" text="M+" textFill="#a18a51" GridPane.columnIndex="5" GridPane.rowIndex="2">
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleMemoriSaveAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(gold 0%, white 100%); -fx-text-fill: #330000;" text="M+" textFill="#a18a51" GridPane.columnIndex="4" GridPane.rowIndex="3">
                <font>
                   <Font size="12.0" />
                </font>
@@ -249,7 +249,7 @@
                      </light>
                   </Lighting>
                </effect></Button>
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleSubtructAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="-" textFill="#358dbf" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleSubtructAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(olive 0%, white 100%); -fx-text-fill: Black;" text="-" textFill="#358dbf" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
                   <Font size="14.0" />
                </font>
@@ -266,7 +266,7 @@
                      </light>
                   </Lighting>
                </effect></Button>
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleXSqrAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: #330000;" text="X²" textFill="#2730e1" GridPane.columnIndex="5" GridPane.rowIndex="4">
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleXSqrAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(khaki 0%, white 100%); -fx-text-fill: #330000;" text="X²" textFill="#2730e1" GridPane.columnIndex="5" GridPane.rowIndex="4">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -280,7 +280,7 @@
                      </light>
                   </Lighting>
                </effect></Button>
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleRootAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: #330000;" text="√" textFill="#282dcd" GridPane.columnIndex="5" GridPane.rowIndex="3">
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleRootAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(khaki 0%, white 100%); -fx-text-fill: #330000;" text="√" textFill="#282dcd" GridPane.columnIndex="5" GridPane.rowIndex="3">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -323,7 +323,7 @@
                      </light>
                   </Lighting>
                </effect></Button>
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handlePersendAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="\%" textFill="#304ec6" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handlePersendAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(khaki 0%, white 100%); -fx-text-fill: Black;" text="\%" textFill="#304ec6" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -337,7 +337,7 @@
                      </light>
                   </Lighting>
                </effect></Button>
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleEqualAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: black;" text="=" textFill="#14e422" GridPane.columnIndex="4" GridPane.rowIndex="4">
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleEqualAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(lime 0%, white 100%); -fx-text-fill: black;" text="=" textFill="#14e422" GridPane.columnIndex="4" GridPane.rowIndex="4">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -394,7 +394,7 @@
                      </light>
                   </Lighting>
                </effect></Button>
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleAddAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: Black;" text="+" textFill="#358dbf" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleAddAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(olive 0%, white 100%); -fx-text-fill: Black;" text="+" textFill="#358dbf" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -408,7 +408,7 @@
                      </light>
                   </Lighting>
                </effect></Button>
-            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleMemoriClearAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(blue 0%, white 100%); -fx-text-fill: #330000;" text="MC" textFill="#a18a51" GridPane.columnIndex="4" GridPane.rowIndex="3">
+            <Button maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleMemoriClearAction" prefHeight="30.0" prefWidth="40.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(salmon 0%, white 100%); -fx-text-fill: #330000;" text="MC" textFill="#a18a51" GridPane.columnIndex="5" GridPane.rowIndex="2">
                <font>
                   <Font size="12.0" />
                </font>

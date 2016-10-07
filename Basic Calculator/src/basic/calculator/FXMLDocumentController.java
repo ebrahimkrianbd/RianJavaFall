@@ -27,7 +27,7 @@ public class FXMLDocumentController implements Initializable {
     String newText = "";
 
     double number1, number2;
-    String operation;
+    String operation = "";
     String save = "0";
     boolean resultUpdated = true;
     boolean operationPending = true;
@@ -79,11 +79,13 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void handleDivisionAction(ActionEvent event) {
         if(mathError){
-        
         oldText = DesplyField.getText();
+        
+        if(!oldText.equals("")){
         number1 = Double.parseDouble(oldText);
         operation = "Division";
         DesplyField.setText("");
+        }
         }
     }
 
@@ -156,9 +158,12 @@ public class FXMLDocumentController implements Initializable {
     private void handleMultiplyAction(ActionEvent event) {
         if(mathError){
         oldText = DesplyField.getText();
+        
+        if(!oldText.equals("")){
         number1 = Double.parseDouble(oldText);
         operation = "Multiply";
         DesplyField.setText("");
+        }
         }
     }
     
@@ -209,9 +214,12 @@ public class FXMLDocumentController implements Initializable {
     private void handleSubtructAction(ActionEvent event) {
         if(mathError){
         oldText = DesplyField.getText();
+        
+        if(!oldText.equals("")){
         number1 = Double.parseDouble(oldText);
         operation = "Subruct";
         DesplyField.setText("");
+        }
         }
 
     }
@@ -220,10 +228,13 @@ public class FXMLDocumentController implements Initializable {
     private void handleXSqrAction(ActionEvent event) {
         if(mathError){
         oldText = DesplyField.getText();
+        
+        if(!oldText.equals("")){
         double data = Double.parseDouble(oldText);
         double sqr = data * data;
 
         DesplyField.setText("" + sqr);
+        }
         }
     }
 
@@ -231,10 +242,13 @@ public class FXMLDocumentController implements Initializable {
     private void handleRootAction(ActionEvent event) {
         if(mathError){
         oldText = DesplyField.getText();
+        
+        if(!oldText.equals("")){
         double data = Double.parseDouble(oldText);
         double sqrt = Math.sqrt(data);
 
         DesplyField.setText("" + sqrt);
+        }
         }
     }
 
@@ -287,18 +301,22 @@ public class FXMLDocumentController implements Initializable {
         number2 = Double.parseDouble(newText);
         double result = 0.0;
         if (operation == "Add") {
+            operation = "";
             result = number1 + number2;
             DesplyField.setText("" + result);
             resultUpdated = false;
         } else if (operation == "Subruct") {
+            operation = "";
             result = number1 - number2;
             DesplyField.setText("" + result);
             resultUpdated = false;
         } else if (operation == "Multiply") {
+            operation = "";
             result = number1 * number2;
             DesplyField.setText("" + result);
             resultUpdated = false;
         } else if (operation == "Division") {
+            operation = "";
             
             if(number2 != 0){
             result = number1 / number2;
@@ -372,9 +390,12 @@ public class FXMLDocumentController implements Initializable {
     private void handleAddAction(ActionEvent event) {
         if(mathError){
         oldText = DesplyField.getText();
+        
+        if(!oldText.equals("")){
         number1 = Double.parseDouble(oldText);
         operation = "Add";
         DesplyField.setText("");
+        }
         }
     }
 
